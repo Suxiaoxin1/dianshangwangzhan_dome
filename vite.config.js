@@ -22,7 +22,6 @@ function fixPublicAssetPaths() {
           } else if (file.endsWith('.js') || file.endsWith('.html') || file.endsWith('.css')) {
             let content = fs.readFileSync(fullPath, 'utf-8');
             const original = content;
-            // 把绝对路径 /img/ 替换为 /仓库名/img/
             content = content.replace(/(['"])\/img\//g, `$1/${repoName}/img/`);
             if (content !== original) {
               fs.writeFileSync(fullPath, content, 'utf-8');
@@ -54,6 +53,9 @@ export default defineConfig({
     port: 8080
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      external: [/^img\//]
+    }
   }
 });

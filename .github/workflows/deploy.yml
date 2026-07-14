@@ -24,6 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Diagnostic
+        run: |
+          pwd
+          ls -la
+          ls -la static || true
+          ls -la static/img || true
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
