@@ -2,7 +2,7 @@
   <div>
     <div class="freeback-container">
       <div class="freeback-img-box">
-        <img src="/img/freeback.png">
+        <img src="img/freeback.png">
       </div>
       <div class="freeback-box-border">
         <div class="freeback-box">
