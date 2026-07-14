@@ -5,7 +5,7 @@
         <Menu active-name="1-2" theme="light" width="auto" @on-select="onSelect">
           <div class="user-icon">
             <div class="user-img">
-              <img src="img/head.png">
+              <img src="/img/head.png">
             </div>
             <p>Gavin</p>
           </div>
